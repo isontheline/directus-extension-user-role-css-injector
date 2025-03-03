@@ -35,6 +35,6 @@ jobs:
         if: |
           github.ref == 'refs/heads/main' &&
           github.repository == 'isontheline/directus-extension-user-role-css-injector'
-        run: npm publish
+        run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

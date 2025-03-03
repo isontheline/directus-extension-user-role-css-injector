@@ -1,4 +1,4 @@
-<p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/nerkarso/directus-extensions/master/.github/banner.png"></p>
+<p align="center"><img alt="Banner" src="https://raw.githubusercontent.com/isontheline/directus-extension-user-role-css-injector/refs/heads/main/.github/img/banner.png"></p>
 
 # User Role CSS Injector
 > Customize Directus UI with Dynamic User and Role Data Attributes
@@ -18,7 +18,7 @@ npm install directus-extension-user-role-css-injector
 
 3. Data attribute gets injected in the body element.
 
-![Screenshot 1](https://raw.githubusercontent.com/nerkarso/directus-extensions/master/hooks/current-role/.screenshots/01.png)
+![Screenshot 1](https://raw.githubusercontent.com/isontheline/directus-extension-user-role-css-injector/refs/heads/main/.github/img/01.png)
 
 4. Add your custom CSS:
 

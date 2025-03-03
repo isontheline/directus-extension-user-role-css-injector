@@ -1,0 +1,45 @@
+{
+  "name": "directus-extension-user-role-css-injector",
+  "description": "Customize Directus UI with Dynamic User and Role Data Attributes",
+  "icon": "extension",
+  "version": "1.0.0",
+  "keywords": [
+    "directus",
+    "directus-extension",
+    "directus-extension-hook"
+  ],
+  "homepage": "https://github.com/isontheline/directus-extension-user-role-css-injector",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isontheline/directus-extension-user-role-css-injector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/isontheline/directus-extension-user-role-css-injector/issues"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "directus:extension": {
+    "type": "hook",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^10.10.0"
+  },
+  "scripts": {
+    "build": "directus-extension build",
+    "dev": "directus-extension build -w --no-minify",
+    "link": "directus-extension link"
+  },
+  "devDependencies": {
+    "@directus/extensions": "^1.0.1",
+    "@directus/extensions-sdk": "11.0.1",
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite@>=4.0.0 <=4.5.2": ">=4.5.3"
+    }
+  }
+}

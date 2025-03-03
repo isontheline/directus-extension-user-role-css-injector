@@ -1,0 +1,40 @@
+name: Build and Deploy
+on: 
+  - push
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      packages: write
+      attestations: write
+      id-token: write
+    steps:
+      # Prepare Job
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Build Project
+      - name: Build Project
+        run: |
+          npm install
+          npm run build
+
+      # Publish to NPM Registry
+      - name: Publish to NPM Registry
+        if: |
+          github.ref == 'refs/heads/main' &&
+          github.repository == 'isontheline/directus-extension-user-role-css-injector'
+        run: npm publish
+        env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

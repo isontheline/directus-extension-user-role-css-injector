@@ -32,7 +32,7 @@ const hook: HookConfig = ({ embed }) => {
         let oldDirectusTitle = document.title;
         setInterval(async () => {
           if (document.title !== oldDirectusTitle) {
-            oldTitle = document.title;
+            oldDirectusTitle = document.title;
             await fetchAndInjectAttributes();
           }
         }, 1000);

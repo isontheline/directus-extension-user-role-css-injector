@@ -2,7 +2,7 @@
   "name": "directus-extension-user-role-css-injector",
   "description": "Customize Directus UI with Dynamic User and Role Data Attributes",
   "icon": "extension",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "keywords": [
     "directus",
     "directus-extension",

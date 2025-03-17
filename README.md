@@ -31,3 +31,8 @@ body[data-user-role="..."] {
   /* custom css */
 }
 ```
+
+## Notes
+* Works even after login, logout, and page content refresh
+* If you encounter any CSP issues, you may/need to remove the `Content-Security-Policy`header in your reverse proxy configuration :
+  * Caddyfile: `header -Content-Security-Policy`
